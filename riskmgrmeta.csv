@@ -1,0 +1,242 @@
+Ticker,Curncy,Roll,Maturities,Category,Exchange,Name,AssetClass,RIC,Timezone,ExecutionStart,ExecutionEnd,Sector,BaseCurncy,Liquidity,Country,PointValue,TDC,ETFType,ETFSector,rollType
+EURMXN CMPN Curncy,EUR,,,,,EURMXN Spot Exchange Rate - Price of 1 EUR in MXN,CROSS,EURMXN=,Europe/London,830,1600,CU,MXN,2,CA,0,EURMXN,,,1
+GBPPLN CMPN Curncy,GBP,,,,,GBPPLN Spot Exchange Rate - Price of 1 GBP in PLN,CROSS,GBPPLN=,Europe/London,830,1600,CU,PLN,3,CA,0,GBPPLN,,,1
+GBPSEK CMPN Curncy,GBP,,,,,GBPSEK Spot Exchange Rate - Price of 1 GBP in SEK,CROSS,GBPSEK=,Europe/London,830,1600,CU,SEK,2,CA,0,GBPSEK,,,1
+AUDCAD CMPN Curncy,AUD,,,,,AUDCAD Spot Exchange Rate - Price of 1 AUD in CAD,CROSS,AUDCAD=,Europe/London,830,1600,CU,CAD,2,CA,0,AUDCAD,,,1
+AUDJPY CMPN Curncy,AUD,,,,,AUDJPY Spot Exchange Rate - Price of 1 AUD in JPY,CROSS,AUDJPY=,Europe/London,830,1600,CU,JPY,3,JP,0,AUDJPY,,,1
+AUDNZD CMPN Curncy,AUD,,,,,AUDNZD Spot Exchange Rate - Price of 1 AUD in NZD,CROSS,AUDNZD=,Europe/London,830,1600,CU,NZD,3,NZ,0,AUDNZD,,,1
+AUDUSD CMPN Curncy,AUD,,,,,AUDUSD Spot Exchange Rate - Price of 1 AUD in USD,CROSS,AUD=,Europe/London,830,1600,CU,USD,5,US,0,AUDUSD,,,1
+CADJPY CMPN Curncy,CAD,,,,,CADJPY Spot Exchange Rate - Price of 1 CAD in JPY,CROSS,CADJPY=,Europe/London,830,1600,CU,JPY,2,JP,0,CADJPY,,,1
+EURAUD CMPN Curncy,EUR,,,,,EURAUD Spot Exchange Rate - Price of 1 EUR in AUD,CROSS,EURAUD=,Europe/London,830,1600,CU,AUD,3,AU,0,EURAUD,,,1
+EURCAD CMPN Curncy,EUR,,,,,EURCAD Spot Exchange Rate - Price of 1 EUR in CAD,CROSS,EURCAD=,Europe/London,830,1600,CU,CAD,3,CA,0,EURCAD,,,1
+EURGBP CMPN Curncy,EUR,,,,,EURGBP Spot Exchange Rate - Price of 1 EUR in GBP,CROSS,EURGBP=,Europe/London,830,1600,CU,GBP,4,GB,0,EURGBP,,,1
+EURHUF CMPN Curncy,EUR,,,,,EURHUF Spot Exchange Rate - Price of 1 EUR in HUF,CROSS,EURHUF=,Europe/London,830,1600,CU,HUF,2,HU,0,EURHUF,,,1
+EURJPY CMPN Curncy,EUR,,,,,EURJPY Spot Exchange Rate - Price of 1 EUR in JPY,CROSS,EURJPY=,Europe/London,830,1600,CU,JPY,4,JP,0,EURJPY,,,1
+EURNOK CMPN Curncy,EUR,,,,,EURNOK Spot Exchange Rate - Price of 1 EUR in NOK,CROSS,EURNOK=,Europe/London,830,1600,CU,NOK,4,NO,0,EURNOK,,,1
+EURPLN CMPN Curncy,EUR,,,,,EURPLN Spot Exchange Rate - Price of 1 EUR in PLN,CROSS,EURPLN=,Europe/London,830,1600,CU,PLN,3,PL,0,EURPLN,,,1
+EURSEK CMPN Curncy,EUR,,,,,EURSEK Spot Exchange Rate - Price of 1 EUR in SEK,CROSS,EURSEK=,Europe/London,830,1600,CU,SEK,4,SE,0,EURSEK,,,1
+EURTRY CMPN Curncy,EUR,,,,,EURTRY Spot Exchange Rate - Price of 1 EUR in TRY,CROSS,EURTRY=,Europe/London,830,1600,CU,TRY,1,TR,0,EURTRY,,,1
+EURUSD CMPN Curncy,EUR,,,,,EURUSD Spot Exchange Rate - Price of 1 EUR in USD,CROSS,EUR=,Europe/London,830,1600,CU,USD,5,US,0,EURUSD,,,1
+GBPAUD CMPN Curncy,GBP,,,,,GBPAUD Spot Exchange Rate - Price of 1 GBP in AUD,CROSS,GBPAUD=,Europe/London,830,1600,CU,AUD,2,AU,0,GBPAUD,,,1
+GBPCAD CMPN Curncy,GBP,,,,,GBPCAD Spot Exchange Rate - Price of 1 GBP in CAD,CROSS,GBPCAD=,Europe/London,830,1600,CU,CAD,2,CA,0,GBPCAD,,,1
+GBPJPY CMPN Curncy,GBP,,,,,GBPJPY Spot Exchange Rate - Price of 1 GBP in JPY,CROSS,GBPJPY=,Europe/London,830,1600,CU,JPY,3,JP,0,GBPJPY,,,1
+GBPUSD CMPN Curncy,GBP,,,,,GBPUSD Spot Exchange Rate - Price of 1 GBP in USD,CROSS,GBP=,Europe/London,830,1600,CU,USD,5,US,0,GBPUSD,,,1
+USDMXN CMPN Curncy,USD,,,,,MXNUSD Spot Exchange Rate - Price of 1 MXN in USD,CROSS,MXN=,Europe/London,830,1600,CU,MXN,4,MX,0,USDMXN,,,1
+CADMXN CMPN Curncy,CAD,,,,,CADMXN Spot Exchange Rate - Price of 1 CAD in MXN,CROSS,CADMXN=,Europe/London,830,1600,CU,MXN,4,MX,0,CADMXN,,,1
+NOKSEK CMPN Curncy,NOK,,,,,NOKSEK Spot Exchange Rate - Price of 1 NOK in SEK,CROSS,NOKSEK=,Europe/London,830,1600,CU,SEK,2,SE,0,NOKSEK,,,1
+NZDJPY CMPN Curncy,NZD,,,,,NZDJPY Spot Exchange Rate - Price of 1 NZD in JPY,CROSS,NZDJPY=,Europe/London,830,1600,CU,JPY,2,JP,0,NZDJPY,,,1
+NZDUSD CMPN Curncy,NZD,,,,,NZDUSD Spot Exchange Rate - Price of 1 NZD in USD,CROSS,NZD=,Europe/London,830,1600,CU,USD,4,US,0,NZDUSD,,,1
+USDSEK CMPN Curncy,USD,,,,,SEKUSD Spot Exchange Rate - Price of 1 SEK in USD,CROSS,SEK=,Europe/London,830,1600,CU,SEK,4,SE,0,USDSEK,,,1
+USDCAD CMPN Curncy,USD,,,,,USDCAD Spot Exchange Rate - Price of 1 USD in CAD,CROSS,CAD=,Europe/London,830,1600,CU,CAD,5,CA,0,USDCAD,,,1
+USDCHF CMPN Curncy,USD,,,,,USDCHF Spot Exchange Rate - Price of 1 USD in CHF,CROSS,CHF=,Europe/London,830,1600,CU,CHF,5,CA,0,USDCHF,,,1
+USDJPY CMPN Curncy,USD,,,,,USDJPY Spot Exchange Rate - Price of 1 USD in JPY,CROSS,JPY=,Europe/London,830,1600,CU,JPY,5,JP,0,USDJPY,,,1
+USDNOK CMPN Curncy,USD,,,,,USDNOK Spot Exchange Rate - Price of 1 USD in NOK,CROSS,NOK=,Europe/London,830,1600,CU,NOK,4,NO,0,USDNOK,,,1
+USDSGD CMPN Curncy,USD,,,,,USDSGD Spot Exchange Rate - Price of 1 USD in SGD,CROSS,SGD=,Europe/London,830,1600,CU,SGD,4,SG,0,USDSGD,,,1
+USDRUB CMPN Curncy,USD,,,,,USDRUB Spot Exchange Rate - Price of 1 USD in RUB,CROSS,RUB=,Europe/London,830,1600,CU,RUB,2,RU,0,USDRUB,,,1
+EURRUB CMPN Curncy,EUR,,,,,EURRUB Spot Exchange Rate - Price of 1 EUR in RUB,CROSS,EURRUB=,Europe/London,830,1600,CU,RUB,2,TU,0,EURRUB,,,1
+USDZAR CMPN Curncy,USD,,,,,USDZAR Spot Exchange Rate - Price of 1 USD in ZAR,CROSS,ZAR=,Europe/London,830,1600,CU,ZAR,2,SA,0,USDZAR,,,1
+EURZAR CMPN Curncy,EUR,,,,,EURZAR Spot Exchange Rate - Price of 1 EUR in ZAR,CROSS,EURZAR=,Europe/London,830,1600,CU,ZAR,2,TU,0,EURZAR,,,1
+USDILS CMPN Curncy,USD,,,,,USDILS Spot Exchange Rate - Price of 1 USD in ILS,CROSS,ILS=,Europe/London,830,1600,CU,ILS,2,TU,0,USDILS,,,1
+USDBRL CMPN Curncy,USD,,,,,USDBRL Spot Exchange Rate - Price of 1 USD in BRL,CROSS,BRL=,Europe/London,830,1600,CU,BRL,2,TU,0,USDBRL,,,1
+USDCLP CMPN Curncy,USD,,,,,USDCLP Spot Exchange Rate - Price of 1 USD in CLP,CROSS,CLP=,Europe/London,830,1600,CU,CLP,2,TU,0,USDCLP,,,1
+USDCOP CMPN Curncy,USD,,,,,USDCOP Spot Exchange Rate - Price of 1 USD in COP,CROSS,COP=,Europe/London,830,1600,CU,COP,2,TU,0,USDCOP,,,1
+USDPEN CMPN Curncy,USD,,,,,USDPEN Spot Exchange Rate - Price of 1 USD in PEN,CROSS,CLP=,Europe/London,830,1600,CU,PEN,2,TU,0,USDPEN,,,1
+EURBRL CMPN Curncy,EUR,,,,,EURBRL Spot Exchange Rate - Price of 1 EUR in BRL,CROSS,EURBRL=,Europe/London,830,1600,CU,BRL,2,TU,0,EURBRL,,,1
+AUDCLP CMPN Curncy,AUD,,,,,AUDCLP Spot Exchange Rate - Price of 1 AUD in CLP,CROSS,AUDCLP=,Europe/London,830,1600,CU,CLP,2,TU,0,AUDCLP,,,1
+BRLMXN CMPN Curncy,BRL,,,,,BRLMXN Spot Exchange Rate - Price of 1 BRL in MXN,CROSS,BRLMXN=,Europe/London,830,1600,CU,MXN,2,TU,0,BRLMXN,,,1
+CZKUSD CMPN Curncy,CZK,,,,,CZKUSD Spot Exchange Rate - Price of 1 CZK in USD,CROSS,CZK=,Europe/London,830,1600,CU,USD,2,TU,0,CZKUSD,,,1
+USDTHB CMPN Curncy,USD,,,,,USDTHB Spot Exchange Rate - Price of 1 USD in THB,CROSS,THB=,Europe/London,830,1600,CU,USD,2,TU,0,USDTHB,,,1
+USDTWD CMPN Curncy,USD,,,,,USDTWD Spot Exchange Rate - Price of 1 USD in TWD,CROSS,TWD=,Europe/London,830,1600,CU,USD,2,TU,0,USDTWD,,,1
+SGDTWD CMPN Curncy,SGD,,,,,SGDTWD Spot Exchange Rate - Price of 1 TWD in TWD,CROSS,SGDTWD=,Europe/London,830,1600,CU,USD,2,TU,0,SGDTWD,,,1
+CNHUSD CMPN Curncy,CNH,,,,,CNHUSD Spot Exchange Rate - Price of 1 CNH in USD,CROSS,CNH=,Europe/London,830,1600,CU,USD,2,TU,0,CNHUSD,,,1
+USDCNH CMPN Curncy,USD,,,,,USDCNH Spot Exchange Rate - Price of 1 CNH in USD,CROSS,CNH=,Europe/London,830,1600,CU,USD,2,TU,0,USDCNH,,,1
+USDHKD CMPN Curncy,USD,,,,,USDHKD Spot Exchange Rate - Price of 1 CNH in USD,CROSS,CNH=,Europe/London,830,1600,CU,USD,2,TU,0,USDHKD,,,1
+USDCNY CMPN Curncy,USD,,,,,USDCNY Spot Exchange Rate - Price of 1 CNH in USD,CROSS,CNH=,Europe/London,830,1600,CU,USD,2,TU,0,USDCNY,,,1
+USDINR CMPN Curncy,USD,,,,,USDINR Spot Exchange Rate - Price of 1 CNH in USD,CROSS,CNH=,Europe/London,830,1600,CU,USD,2,TU,0,USDINR,,,1
+USDKRW CMPN Curncy,USD,,,,,USDKRW Spot Exchange Rate - Price of 1 CNH in USD,CROSS,CNH=,Europe/London,830,1600,CU,USD,2,TU,0,USDKRW,,,1
+C 1 Comdty,USD,45,HKNUZ,Corn,XCBT,CBOT Corn Future,Future,C,America/Chicago,1430,1930,AG,NAC,4,US,50,CN,,,1
+CC1 Comdty,USD,55,HKNUZ,Foodstuff,IFUS,NYBOT CSC Cocoa Future,Future,CC,America/Chicago,1430,1930,SO,NAC,3,US,10,CC,,,1
+CL1 Comdty,USD,20,FGHJKMNQUVXZ,Crude Oil,XNYM,NYMEX Light Sweet Crude Oil Future,Future,CL,America/Chicago,1430,1930,EN,NAC,5,US,1000,CL,,,1
+CN1 Comdty,CAD,30,HMUZ,Bond,XMOD,Montreal Exchange 10 Year Canadian Bond Future,Future,CGB,America/Montreal,1430,1930,BO,NAC,5,CA,1000,CB,,,1
+CO1 Comdty,USD,20,FGHJKMNQUVXZ,Crude Oil,IFEU,ICE Brent Crude Oil Future,Future,DLCO,America/New_York,1430,1930,EN,NAC,5,GB,1000,CO,,,1
+CT1 Comdty,USD,50,HKNZ,Fibers,IFUS,NYBOT CTN Number 2 Cotton Future,Future,CT,America/New_York,1430,1930,SO,NAC,3,US,500,CT,,,1
+DU1 Comdty,EUR,10,HMUZ,Bond,XEUR,Eurex 2 Year Euro SCHATZ Future,Future,FGBS,America/Chicago,830,1600,BO,NAC,5,DE,1000,BZ,,,1
+DX1 Curncy,USD,5,HMUZ,Cross Currency,IMFX,NYBOT FINEX United States Dollar Index Future,Future,DX,America/New_York,1430,1930,CU,NAC,4,US,1000,DX,,,1
+AD1 Curncy,USD,5,HMUZ,Cross Currency,IMFX,NYBOT FINEX United States Dollar Index Future,Future,DX,America/New_York,1430,1930,CU,NAC,4,US,1000,AD,,,1
+CD1 Curncy,USD,5,HMUZ,Cross Currency,IMFX,NYBOT FINEX United States Dollar Index Future,Future,DX,America/New_York,1430,1930,CU,NAC,4,US,1000,CD,,,1
+EC1 Curncy,USD,5,HMUZ,Cross Currency,IMFX,NYBOT FINEX United States Dollar Index Future,Future,DX,America/New_York,1430,1930,CU,NAC,4,US,1000,EC,,,1
+BP1 Curncy,USD,5,HMUZ,Cross Currency,IMFX,NYBOT FINEX United States Dollar Index Future,Future,DX,America/New_York,1430,1930,CU,NAC,4,US,1000,BP,,,1
+JY1 Curncy,USD,5,HMUZ,Cross Currency,IMFX,NYBOT FINEX United States Dollar Index Future,Future,DX,America/New_York,1430,1930,CU,NAC,4,US,1000,JY,,,1
+EO1 Index,EUR,5,FGHJKMNQUVXZ,Equity Index,XEUE,Euronext Amsterdam Index Future,Future,AEX,America/New_York,830,1600,SI,NAC,4,NL,200,EO,,,1
+ES1 Index,USD,5,HMUZ,Equity Index,XCME,CME E-Mini Standard & Poor's 500 Index Future,Future,ES,America/Chicago,1430,1930,SI,NAC,5,US,50,ES,,,-1
+LC1 Comdty,USD,50,GJMQVZ,Livestock,XCME,CME Live Cattle Future,Future,LC,America/New_York,1430,1930,LS,NAC,3,US,400,LC,,,1
+FC1 Comdty,USD,45,FHJKQUVX,Livestock,XCME,CME Feeder Cattle Future,Future,FC,America/Chicago,1430,1930,LS,NAC,2,US,500,FC,,,1
+FV1 Comdty,USD,45,HMUZ,Bond,XCBT,CBOT 5 Year US Treasury Note,Future,FV,America/Chicago,1430,1930,BO,NAC,5,US,1000,FV,,,1
+G 1 Comdty,GBP,35,HMUZ,Bond,IFLL,Long Gilt Future,Future,FLG,Europe/London,200,500,BO,NAC,5,GB,1000,GL,,,1
+GC1 Comdty,USD,50,GJMQVZ,Precious Metal,XCEC,COMEX Gold 100 Troy Ounces Future,Future,GC,America/Chicago,1430,1930,ME,NAC,4,US,100,GC,,,1
+GX1 Index,EUR,10,HMUZ,Equity Index,XEUR,Eurex DAX Index Future,Future,FDX,Europe/Berlin,830,1600,SI,NAC,5,DE,25,DA,,,1
+HC1 Index,HKD,10,HMUZ,Equity Index,XHKF,HKG Hang Seng China Enterprises Index Future,Future,HCEI,Asia/Hong_Kong,200,500,SI,NAC,5,HK,50,HC,,,-1
+HG1 Comdty,USD,55,HKNUZ,Base Metal,XCEC,COMEX Copper Future,Future,HG,America/Chicago,1430,1930,ME,NAC,4,US,250,HG,,,1
+HI1 Index,HKD,10,HMUZ,Equity Index,XHKF,HKG Hang Seng Index Future,Future,HSI,Asia/Hong_Kong,200,500,SI,NAC,5,HK,50,HI,,,-1
+HO1 Comdty,USD,20,FGHJKMNQUVXZ,Refined Products,XNYM,NYMEX NY Harbor ULSD Futures,Future,HO,America/Chicago,1430,1930,EN,NAC,4,US,420,HO,,,1
+IB1 Index,EUR,5,FGHJKMNQUVXZ,Equity Index,XMRV,MEFF Madrid IBEX 35 Index Future,Future,MFXI,America/Chicago,830,1600,SI,NAC,4,ES,10,IB,,,1
+JB1 Comdty,JPY,15,HMUZ,Bond,XOSE,TSE Japanese 10 Year Bond Future,Future,JGB,Asia/Tokyo,200,500,BO,NAC,5,JP,1000000,JB,,,1
+BJ1 Comdty,JPY,15,HMUZ,Bond,XSGX,SGX Mini Japanese 10 Year Bond Future,Future,SGB,Asia/Tokyo,200,500,BO,NAC,5,JP,100000,JBM,,,1
+KAA1 Comdty,KRW,5,HMUZ,Bond,XKFE,KFE 10 Year Treasury Bond Future,Future,10TB,Asia/Tokyo,200,500,BO,NAC,5,KR,1000000,NAKAA,,,1
+KC1 Comdty,USD,55,HKNUZ,Foodstuff,IFUS,NYBOT CSC C Coffee Future,Future,KC,America/New_York,1430,1930,SO,NAC,3,US,375,KC,,,1
+DF1 Comdty,USD,45,FHKNUX,Foodstuff,IFLX,Robusta Coffee Future 10-Ton,Future,LRC,America/New_York,1430,1930,SO,NAC,3,US,10,RC,,,1
+KM1 Index,KRW,5,HMUZ,Equity Index,XKFE,KFE KOSPI 200 Index Future,Future,KS,America/New_York,200,500,SI,NAC,5,KR,250000,KM,,,-1
+LH1 Comdty,USD,45,GJMNQVZ,Livestock,XCME,CME Lean Hogs Future,Future,LH,America/New_York,1430,1930,LS,NAC,3,US,400,LH,,,1
+NG1 Comdty,USD,20,FGHJKMNQUVXZ,Natural Gas,XNYM,NYMEX Henry Hub Natural Gas Futures,Future,NG,America/Chicago,1430,1930,EN,NAC,4,US,10000,NG,,,1
+NI1 Index,JPY,5,HMUZ,Equity Index,XSIM,SGX Nikkei 225 Stock Index Future,Future,SSI,Asia/Singapore,200,500,SI,NAC,5,JP,500,EN,,,-1
+NQ1 Index,USD,5,HMUZ,Equity Index,XCME,CME E-Mini NASDAQ 100 Index Future,Future,NQ,America/Chicago,1430,1930,SI,NAC,5,US,20,NQ,,,-1
+OAT1 Comdty,EUR,10,HMUZ,Bond,XEUR,French Government Bond Futures,Future,FOAT,America/Chicago,830,1600,BO,NAC,5,DE,1000,BF,,,1
+IK1 Comdty,EUR,10,HMUZ,Bond,XEUR,Italian Government Bond Futures,Future,BTP,America/Chicago,830,1600,BO,NAC,5,DE,1000,BT,,,1
+OE1 Comdty,EUR,10,HMUZ,Bond,XEUR,Eurex 5 Year Euro BOBL Future,Future,FGBM,America/Chicago,830,1600,BO,NAC,5,DE,1000,BL,,,1
+PA1 Comdty,USD,50,HMUZ,Precious Metal,XNYM,NYMEX Palladium Future,Future,PA,America/Chicago,1430,1930,ME,NAC,2,US,100,PA,,,1
+PL1 Comdty,USD,50,FJNV,Precious Metal,XNYM,NYMEX Platinum Future,Future,PL,America/Chicago,1430,1930,ME,NAC,3,US,50,PL,,,1
+PT1 Index,CAD,10,HMUZ,Equity Index,XMOD,Montreal Exchange S&P/TSX 60 Index Future,Future,SXF,America/Montreal,1430,1930,SI,NAC,5,CA,200,PT,,,-1
+QC1 Index,SEK,5,HMUZ,Equity Index,XSTO,OML Stockholm OMXS30 Index Future,Future,OMXS30,America/Montreal,830,1600,SI,NAC,5,SE,100,NAQC,,,-1
+QC1 Comdty,GBP,50,HKNUZ,Foodstuff,IFLX,Cocoa Future,Future,LCC,America/Montreal,830,1600,SO,NAC,2,GB,10,C,,,1
+QS1 Comdty,USD,20,FGHJKMNQUVXZ,Refined Products,IFEU,ICE Gas Oil Future,Future,DLGO,America/New_York,1430,1930,EN,NAC,4,GB,100,GO,,,1
+RTA1 Index,USD,5,HMUZ,Equity Index,IFUS,NYBOT NYF Mini Russell 2000 Index Future,Future,TFS,America/New_York,1430,1930,SI,NAC,4,US,1250,ER,,,-1
+RTY1 Index,USD,5,HMUZ,Equity Index,IFUS,NYBOT NYF Mini Russell 2000 Index Future,Future,RTYx,America/New_York,1430,1930,SI,NAC,4,US,50,TF,,,-1
+RX1 Comdty,EUR,10,HMUZ,Bond,XEUR,Eurex 10 Year Euro BUND Future,Future,FGBL,Europe/Berlin,830,1600,BO,NAC,5,DE,1000,BN,,,1
+S 1 Comdty,USD,40,FHKNX,Soy,XCBT,CBOT Soybean Future,Future,S,America/Chicago,1430,1930,AG,NAC,4,US,50,SY,,,1
+BO1 Comdty,USD,40,FHKNZ,Soy Oil,XCBT,CBOT Soybean Oil Future,Future,BO,America/Chicago,1430,1930,AG,NAC,4,US,600,BO,,,1
+SB1 Comdty,USD,35,HKNV,Foodstuff,IFUS,NYBOT CSC Number 11 World Sugar Future,Future,SB,America/New_York,1430,1930,SO,NAC,4,US,1120,SB,,,1
+QW1 Comdty,USD,35,HKQVZ,Foodstuff,IFLX,White Sugar Future,Future,LSU,America/New_York,1430,1930,SO,NAC,4,US,50,W,,,1
+SI1 Comdty,USD,55,HKNUZ,Precious Metal,XCEC,COMEX Silver Future,Future,SI,America/Chicago,1430,1930,ME,NAC,4,US,5000,SV,,,1
+SM1 Comdty,USD,40,FHKNZ,Soy,XCBT,CBOT Soybean Meal Future,Future,ZM,America/Chicago,1430,1930,AG,NAC,3,US,100,SM,,,1
+TU1 Comdty,USD,45,HMUZ,Bond,XCBT,CBOT 2 Year US Treasury Note Future,Future,TU,America/Chicago,1430,1930,BO,NAC,5,US,2000,TU,,,1
+TW1 Index,USD,10,FGHJKMNQUVXZ,Equity Index,XSIM,SGX MSCI Taiwan Index Future,Future,STW,America/Chicago,1430,1930,SI,NAC,4,SG,100,TW,,,-1
+SM1 Index,CHF,10,HMUZ,Equity Index,EUX,Swiss Index Future,Future,FSMI,America/Chicago,1430,1930,SI,NAC,4,CH,10,SW,,,1
+TY1 Comdty,USD,30,HMUZ,Bond,XCBT,CBOT 10 Year US Treasury Note,Future,TY,America/Chicago,1430,1930,BO,NAC,5,US,1000,TY,,,1
+UB1 Comdty,EUR,10,HMUZ,Bond,XEUR,Eurex 30 Year Euro BUXL Future,Future,FGBX,America/Chicago,830,1600,BO,NAC,5,DE,1000,BX,,,1
+US1 Comdty,USD,30,HMUZ,Bond,XCBT,CBOT US Long Bond Future,Future,US,America/Chicago,1430,1930,BO,NAC,5,US,1000,UB,,,1
+UX1 Index,USD,15,FGHJKMNQUVXZ,Equity Index,XCBF,CBOE Volatility Index Future,Future,VX,America/Chicago,1430,1930,VO,NAC,4,US,1000,VX,,,-1
+VG1 Index,EUR,10,HMUZ,Equity Index,XEUR,Eurex EURO STOXX 50 Future,Future,STXE,Europe/Berlin,830,1600,SI,NAC,5,DE,10,XX,,,1
+VH1 Index,EUR,10,HMUZ,Equity Index,XEUR,Eurex EURO STOXX 50 Future,Future,STXE,Europe/Berlin,830,1600,SI,NAC,5,DE,10,VH,,,1
+FVS1 Index,EUR,5,HMUZ,Equity Index,XEUR,Eurex EURO STOXX 50 Future,Future,STXE,Europe/Berlin,830,1600,VO,NAC,5,DE,100,FVS,,,1
+ST1 Index,EUR,10,HMUZ,Equity Index,XEUR,MIB Future,Future,MIB,Europe/Berlin,830,1600,SI,NAC,5,DE,5,II,,,-1
+W 1 Comdty,USD,40,HKNUZ,Wheat,XCBT,CBOT Wheat Future,Future,W,America/Chicago,1430,1930,AG,NAC,4,US,50,WC,,,1
+MW1 Comdty,USD,40,HKNUZ,Wheat,MGX,MGX Millet Wheat Future,Future,MW,America/Chicago,1430,1930,AG,NAC,4,US,50,WC,,,1
+KW1 Comdty,USD,40,HKNUZ,Wheat,XCBT,CBOT Hard Red Wheat Future,Future,KW,America/New_York,1430,1930,AG,NAC,4,US,50,KW,,,1
+XB1 Comdty,USD,20,FGHJKMNQUVXZ,Refined Products,XNYM,NYMEX Reformulated Gasoline Blendstock for Oxygen Blending RBOB Futures,Future,RB,America/Chicago,1430,1930,EN,NAC,4,US,420,XB,,,1
+XP1 Index,AUD,5,HMUZ,Equity Index,XSFE,SFE S&P ASX Share Price Index 200 Future,Future,YAP,Australia/Sydney,200,1930,SI,NAC,5,AU,25,XP,,,1
+IH1 Index,USD,5,FGHJKMNQUVXZ,Equity Index,XSIM,SGX Nifty,Future,SIN,Asia/Singapore,200,1930,SI,NAC,5,SI,2,FN,,,-1
+CF1 Index,EUR,5,FGHJKMNQUVXZ,Equity Index,XMON,Euronext CAC 40 Index Future,Future,FCE,Europe/Berlin,200,1930,SI,NAC,5,FR,10,CF,,,1
+OI1 Index,NOK,5,FGHJKMNQUVXZ,Equity Index,XOSL,OBX OSLO Index Future,Future,OBX,America/Chicago,200,1930,SI,NAC,5,NO,100,NAOI,,,-1
+A51 Index,TRY,5,GJMQVZ,Equity Index,XIST,TurkDEX ISE 30 Futures,Future,NRIC,Europe/London,200,1930,SI,NAC,5,TU,100,NAA51,,,0
+DM1 Index,USD,5,HMUZ,Equity Index,XCBT,CBOT $5 Mini Dow Jones Indus,Future,YM,America/Chicago,200,1930,SI,NAC,5,US,5,YM,,,-1
+XU1 Index,USD,5,FGHJKMNQUVXZ,Equity Index,XSIM,SGX FTSE China A50 Futures C,Future,SFC,Australia/Sydney,200,1930,SI,NAC,5,SI,1,CA,,,-1
+NK1 Index,JPY,5,HMUZ,Equity Index,XOSE,OSE Nikkei 225 Index Future,Future,JTI,Asia/Singapore,200,1930,SI,NAC,5,JN,1000,NE,,,-1
+NX1 Index,USD,5,HMUZ,Equity Index,XCBT,USD Denominated Nikkei 225 Future,Future,YM,America/Chicago,200,1930,SI,NAC,5,US,5,NK,,,-1
+TP1 Index,JPY,5,HMUZ,Equity Index,XOSE,TSE TOPIX (Tokyo Price Index,Future,JNI,America/Chicago,200,1930,SI,NAC,5,JN,10000,TP,,,-1
+Z 1 Index,GBP,5,HMUZ,Equity Index,IFLL,FTSE 100 Index Future,Future,FFI,Europe/London,200,1930,SI,NAC,5,GB,10,FT,,,1
+YM1 Comdty,AUD,5,HMUZ,Bond,XSFE,SFE 3 Year Australian Bond F,Future,YTT,Australia/Sydney,200,1930,BO,NAC,5,AU,0,AY,,,1
+XM1 Comdty,AUD,5,HMUZ,Bond,XSFE,SFE 10 Year Australian Bond,Future,YTC,Australia/Sydney,200,1930,BO,NAC,5,AU,0,AX,Debt Fund,Government/Corporate,1
+AGG US Equity,USD,,,,ARCX,iShares Core U.S. Aggregate Bond ETF,Mutual Fund,AGG.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,4,US,0,AGG,Equity Fund,Sector Fund-Energy,1
+AMJ US Equity,USD,,,,ARCX,JPMorgan Alerian MLP Index ETN,Mutual Fund,AMJ.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,AMJ,Debt Fund,Government/Corporate,1
+BKLN US Equity,USD,,,,ARCX,PowerShares Senior Loan Portfolio,Mutual Fund,BKLN.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,3,US,0,BKLN,Debt Fund,Corp/Pref-Inv Grade,1
+CIU US Equity,USD,,,,XNMS,iShares Intermediate Credit Bond ETF,Mutual Fund,CIU.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,3,US,0,CIU,Commodity Fund,Commodity,1
+DBC US Equity,USD,,,,ARCX,PowerShares DB Commodity Index Tracking Fund,Mutual Fund,DBC.P,America/New_York,1430,1930,ETF_Commodity,NAC,3,US,0,DBC,Equity Fund,Growth&Income-Large Cap,1
+DIA US Equity,USD,,,,ARCX,SPDR DJIA TRUST,Mutual Fund,DIA.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,DIA,Equity Fund,Aggressive Growth,1
+DVY US Equity,USD,,,,XNMS,iShares Select Dividend ETF,Mutual Fund,DVY.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,DVY,Equity Fund,Country Fund-Japan,1
+DXJ US Equity,USD,,,,ARCX,WISDOMTREE JAPAN HEDGED EQ,Mutual Fund,DXJ.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,DXJ,Equity Fund,Emerging Market-Equity,1
+EEM US Equity,USD,,,,ARCX,iShares MSCI Emerging Markets ETF,Mutual Fund,EEM.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,EEM,Equity Fund,International Equity,1
+EFA US Equity,USD,,,,ARCX,iShares MSCI EAFE ETF,Mutual Fund,EFA.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,EFA,Debt Fund,Emerging Market-Debt,1
+EMB US Equity,USD,,,,XNMS,iShares JP Morgan USD Emerging Markets Bond ETF,Mutual Fund,EMB.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,4,US,0,EMB,Debt Fund,Emerging Market-Debt,1
+EMLC US Equity,USD,,,,ARCX,VanEck Vectors J.P. Morgan EM Local Currency Bond ETF,Mutual Fund,EMLC.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,3,US,0,EMLC,Equity Fund,Asian Pacific Ex Japan,1
+EPP US Equity,USD,,,,ARCX,ISHARES MSCI PACIFIC EX JAPA,Mutual Fund,EPP.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EPP,Equity Fund,Country Fund-Australia,1
+EWA US Equity,USD,,,,ARCX,ISHARES MSCI AUSTRALIA ETF,Mutual Fund,EWA.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWA,Equity Fund,Country Fund-Canada,1
+EWC US Equity,USD,,,,ARCX,ISHARES MSCI CANADA ETF,Mutual Fund,EWC.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWC,Equity Fund,Country Fund-Germany,1
+EWG US Equity,USD,,,,ARCX,iShares MSCI Germany ETF,Mutual Fund,EWG.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWG,Equity Fund,Geo Focus-Equity,1
+EWH US Equity,USD,,,,ARCX,ISHARES MSCI HONG KONG ETF,Mutual Fund,EWH.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWH,Equity Fund,Country Fund-Italy,1
+EWI US Equity,USD,,,,ARCX,ISHARES MSCI ITALY ETF,Mutual Fund,EWI.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWI,Equity Fund,Country Fund-Japan,1
+EWJ US Equity,USD,,,,ARCX,ISHARES MSCI JAPAN ETF,Mutual Fund,EWJ.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,EWJ,Equity Fund,Country Fund-Switzerland,1
+EWL US Equity,USD,,,,ARCX,ISHARES MSCI SWITZERLAND ETF,Mutual Fund,EWL.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWL,Equity Fund,Country Fund-Malaysia,1
+EWM US Equity,USD,,,,ARCX,ISHARES MSCI MALAYSIA ETF,Mutual Fund,EWM.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWM,Equity Fund,Country Fund-Spain,1
+EWP US Equity,USD,,,,ARCX,ISHARES MSCI SPAIN ETF,Mutual Fund,EWP.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWP,Equity Fund,Country Fund-France,1
+EWQ US Equity,USD,,,,ARCX,iShares MSCI France ETF,Mutual Fund,EWQ.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWQ,Equity Fund,Country Fund-Singapore,1
+EWS US Equity,USD,,,,ARCX,ISHARES MSCI SINGAPORE ETF,Mutual Fund,EWS.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,EWS,Equity Fund,Geo Focus-Equity,1
+EWT US Equity,USD,,,,ARCX,ISHARES MSCI TAIWAN ETF,Mutual Fund,EWT.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWT,Equity Fund,Country Fund-U.K.,1
+EWU US Equity,USD,,,,ARCX,ISHARES MSCI UNITED KINGDOM,Mutual Fund,EWU.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWU,Equity Fund,Country Fund-Mexico,1
+EWW US Equity,USD,,,,ARCX,iShares MSCI Mexico Capped ETF,Mutual Fund,EWW.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWW,Equity Fund,Country Fund-Korea,1
+EWY US Equity,USD,,,,ARCX,ISHARES MSCI SOUTH KOREA ETF,Mutual Fund,EWY.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EWY,Equity Fund,Country Fund-Brazil,1
+EWZ US Equity,USD,,,,ARCX,iShares MSCI Brazil Capped ETF,Mutual Fund,EWZ.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,EWZ,Equity Fund,Region Fund-EU,1
+EZU US Equity,USD,,,,BATS,ISHARES MSCI EUROZONE ETF,Mutual Fund,EZU.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,EZU,Equity Fund,Region Fund-European,1
+FEZ US Equity,USD,,,,ARCX,SPDR EURO STOXX 50 ETF,Mutual Fund,FEZ.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,FEZ,Equity Fund,Country Fund-China,1
+FXI US Equity,USD,,,,ARCX,iShares China Large-Cap ETF,Mutual Fund,FXI.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,FXI,Equity Fund,Precious Metals,1
+GDX US Equity,USD,,,,ARCX,VanEck Vectors Gold Miners ETF,Mutual Fund,GDX.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,GDX,Equity Fund,Precious Metals,1
+GDXJ US Equity,USD,,,,ARCX,VanEck Vectors Junior Gold Miners ETF,Mutual Fund,GDXJ.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,GDXJ,Debt Fund,Corp/Pref-High Yield,1
+HYG US Equity,USD,,,,ARCX,iShares iBoxx $ High Yield Corporate Bond ETF,Mutual Fund,HYG.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,5,US,0,HYG,Debt Fund,Govt/Corp High Yield,1
+HYS US Equity,USD,,,,ARCX,PIMCO 0-5 Year High Yield Corporate Bond Index Exchange-Traded Fund,Mutual Fund,HYS.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,3,US,0,HYS,Equity Fund,Region Fund-European,1
+IEV US Equity,USD,,,,ARCX,ISHARES EUROPE ETF,Mutual Fund,IEV.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,IEV,Equity Fund,Growth & Income-Mid Cap,1
+IJH US Equity,USD,,,,ARCX,ISHARES CORE S&P MIDCAP ETF,Mutual Fund,IJH.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IJH,Equity Fund,Growth&Income-Small Cap,1
+IJR US Equity,USD,,,,ARCX,ISHARES CORE S&P SMALL-CAP E,Mutual Fund,IJR.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IJR,Equity Fund,Region Fund-Latin Amer,1
+ILF US Equity,USD,,,,ARCX,iShares Latin America 40 ETF,Mutual Fund,ILF.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,ILF,Equity Fund,Sector Fund-Real Estate,1
+ITB US Equity,USD,,,,BATS,ISHARES U.S. HOME CONSTRUCTI,Mutual Fund,ITB.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,ITB,Equity Fund,Growth & Income,1
+ITOT US Equity,USD,,,,ARCX,ISHARES CORE S&P TOTAL U.S.,Mutual Fund,ITOT.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,ITOT,Equity Fund,Growth,1
+IUSG US Equity,USD,,,,XNMS,ISHARES CORE S&P U.S. GROWTH,Mutual Fund,IUSG.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,IUSG,Equity Fund,Value-Large Cap,1
+IVE US Equity,USD,,,,ARCX,iShares S&P 500 Value ETF,Mutual Fund,IVE.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,IVE,Equity Fund,Growth&Income-Large Cap,1
+IVV US Equity,USD,,,,ARCX,ISHARES CORE S&P 500 ETF,Mutual Fund,IVV.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,IVV,Equity Fund,Growth-Large Cap,1
+IVW US Equity,USD,,,,ARCX,iShares S&P 500 Growth ETF,Mutual Fund,IVW.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IVW,Equity Fund,Growth&Income-Large Cap,1
+IWB US Equity,USD,,,,ARCX,ISHARES RUSSELL 1000 ETF,Mutual Fund,IWB.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IWB,Equity Fund,Value-Large Cap,1
+IWD US Equity,USD,,,,ARCX,ISHARES RUSSELL 1000 VALUE E,Mutual Fund,IWD.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IWD,Equity Fund,Growth-Large Cap,1
+IWF US Equity,USD,,,,ARCX,ISHARES RUSSELL 1000 GROWTH,Mutual Fund,IWF.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IWF,Equity Fund,Growth&Income-Small Cap,1
+IWM US Equity,USD,,,,ARCX,iShares Russell 2000 ETF,Mutual Fund,IWM.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,IWM,Equity Fund,Value-Small Cap,1
+IWN US Equity,USD,,,,ARCX,ISHARES RUSSELL 2000 VALUE E,Mutual Fund,IWN.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,IWN,Equity Fund,Sector Fund-Real Estate,1
+IYR US Equity,USD,,,,ARCX,iShares U.S. Real Estate ETF,Mutual Fund,IYR.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,IYR,Debt Fund,Corp/Pref-High Yield,1
+JNK US Equity,USD,,,,ARCX,SPDR Bloomberg Barclays High Yield Bond ETF,Mutual Fund,JNK.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,5,US,0,JNK,Equity Fund,Growth&Income-Small Cap,1
+JNUG US Equity,USD,,,,ARCX,Direxion Daily Junior Gold Miners Index Bull 3x Shares,Mutual Fund,JNUG.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,JNUG,Equity Fund,Financial Services,1
+KBE US Equity,USD,,,,ARCX,SPDR S&P BANK ETF,Mutual Fund,KBE.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,KBE,Equity Fund,Financial Services,1
+KRE US Equity,USD,,,,ARCX,SPDR S&P REGIONAL BANKING,Mutual Fund,KRE.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,KRE,Debt Fund,Corp/Pref-Inv Grade,1
+LQD US Equity,USD,,,,ARCX,iShares iBoxx $ Investment Grade Corporate Bond ETF,Mutual Fund,LQD.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,5,US,0,LQD,Equity Fund,Growth & Income-Mid Cap,1
+MDY US Equity,USD,,,,ARCX,SPDR S&P MIDCAP 400 ETF TRST,Mutual Fund,MDY.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,MDY,Equity Fund,Precious Metals,1
+NUGT US Equity,USD,,,,ARCX,Direxion Daily Gold Miners Index Bull 3X Shares,Mutual Fund,NUGT.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,NUGT,Debt Fund,Emerging Market-Debt,1
+PCY US Equity,USD,,,,ARCX,PowerShares Emerging Markets Sovereign Debt Portfolio,Mutual Fund,PCY.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,3,US,0,PCY,Equity Fund,Sector Fund-Technology,1
+QQQ US Equity,USD,,,,XNMS,PowerShares QQQ Trust Series 1,Mutual Fund,QQQ.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,QQQ,Equity Fund,Country Fund-Russia,1
+RSX US Equity,USD,,,,ARCX,VANECK VECTORS RUSSIA ETF,Mutual Fund,RSX.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,RSX,Equity Fund,Sector Fund-Real Estate,1
+RWX US Equity,USD,,,,ARCX,SPDR Dow Jones International Real Estate ETF,Mutual Fund,RWX.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,RWX,Equity Fund,International Equity,1
+SCZ US Equity,USD,,,,XNMS,ISHARES MSCI EAFE SMALL-CAP,Mutual Fund,SCZ.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,SCZ,Equity Fund,Aggressive Growth,1
+SDY US Equity,USD,,,,ARCX,SPDR S&P Dividend ETF,Mutual Fund,SDY.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,SDY,Equity Fund,Growth&Income-Large Cap,1
+SPLV US Equity,USD,,,,ARCX,PowerShares S&P 500 Low Volatility Portfolio,Mutual Fund,SPLV.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,SPLV,Equity Fund,Growth&Income-Large Cap,1
+SPY US Equity,USD,,,,ARCX,SPDR S&P500 ETF Trust,Mutual Fund,SPY.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,SPY,Equity Fund,Growth-Large Cap,1
+SPYG US Equity,USD,,,,ARCX,SPDR PORTFOLIO S&P 500 GROWT,Mutual Fund,SPYG.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,SPYG,Debt Fund,Government/Agency,1
+TIP US Equity,USD,,,,ARCX,iShares TIPS Bond ETF,Mutual Fund,TIP.P,America/New_York,1430,1930,ETF_Fixed_Income,NAC,4,US,0,TIP,Commodity Fund,Commodity,1
+USO US Equity,USD,,,,ARCX,United States Oil Fund LP,Mutual Fund,USO.P,America/New_York,1430,1930,ETF_Commodity,NAC,4,US,0,USO,Equity Fund,Undefined Equity,1
+UVXY US Equity,USD,,,,ARCX,ProShares Ultra VIX Short-Term Futures ETF,Mutual Fund,UVXY.P,America/New_York,1430,1930,ETF_Specialty,NAC,5,US,0,UVXY,Equity Fund,International Equity,1
+VEA US Equity,USD,,,,ARCX,VANGUARD FTSE DEVELOPED ETF,Mutual Fund,VEA.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VEA,Equity Fund,International Equity,1
+VEU US Equity,USD,,,,ARCX,VANGUARD FTSE ALL-WORLD EX-U,Mutual Fund,VEU.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VEU,Equity Fund,Region Fund-European,1
+VGK US Equity,USD,,,,ARCX,Vanguard FTSE Europe ETF,Mutual Fund,VGK.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VGK,Equity Fund,Sector Fund-Technology,1
+VGT US Equity,USD,,,,ARCX,VANGUARD INFO TECH ETF,Mutual Fund,VGT.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VGT,Equity Fund,Sector Fund-Real Estate,1
+VNQ US Equity,USD,,,,ARCX,Vanguard REIT ETF,Mutual Fund,VNQ.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,VNQ,Equity Fund,Region Fnd-Asian Pacific,1
+VPL US Equity,USD,,,,ARCX,VANGUARD FTSE PACIFIC ETF,Mutual Fund,VPL.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,VPL,Equity Fund,Growth & Income,1
+VTI US Equity,USD,,,,ARCX,VANGUARD TOTAL STOCK MKT ETF,Mutual Fund,VTI.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VTI,Equity Fund,Value-Large Cap,1
+VTV US Equity,USD,,,,ARCX,VANGUARD VALUE ETF,Mutual Fund,VTV.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VTV,Equity Fund,Growth-Large Cap,1
+VUG US Equity,USD,,,,ARCX,VANGUARD GROWTH ETF,Mutual Fund,VUG.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,VUG,Equity Fund,Growth&Income-Large Cap,1
+VV US Equity,USD,,,,ARCX,VANGUARD LARGE-CAP ETF,Mutual Fund,VV.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,VV,Equity Fund,Emerging Market-Equity,1
+VWO US Equity,USD,,,,ARCX,Vanguard FTSE Emerging Markets ETF,Mutual Fund,VWO.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,VWO,Equity Fund,Aggressive Growth,1
+VYM US Equity,USD,,,,ARCX,VANGUARD HIGH DVD YIELD ETF,Mutual Fund,VYM.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,VYM,Equity Fund,Sector Fund-Real Estate,1
+XHB US Equity,USD,,,,ARCX,SPDR S&P HOMEBUILDERS ETF,Mutual Fund,XHB.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,XHB,Equity Fund,Undefined Equity,1
+XLB US Equity,USD,,,,ARCX,Materials Select Sector SPDR Fund,Mutual Fund,XLB.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,XLB,Equity Fund,Sector Fund-Energy,1
+XLE US Equity,USD,,,,ARCX,Energy Select Sector SPDR Fund,Mutual Fund,XLE.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLE,Equity Fund,Financial Services,1
+XLF US Equity,USD,,,,ARCX,Financial Select Sector SPDR Fund,Mutual Fund,XLF.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLF,Equity Fund,Undefined Equity,1
+XLI US Equity,USD,,,,ARCX,Industrial Select Sector SPDR Fund,Mutual Fund,XLI.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLI,Equity Fund,Sector Fund-Technology,1
+XLK US Equity,USD,,,,ARCX,Technology Select Sector SPDR Fund,Mutual Fund,XLK.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLK,Equity Fund,Undefined Equity,1
+XLP US Equity,USD,,,,ARCX,Consumer Staples Select Sector SPDR Fund,Mutual Fund,XLP.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLP,Equity Fund,Sector Fund-Utility,1
+XLU US Equity,USD,,,,ARCX,Utilities Select Sector SPDR Fund,Mutual Fund,XLU.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLU,Equity Fund,Health & Biotechnology,1
+XLV US Equity,USD,,,,ARCX,Health Care Select Sector SPDR Fund,Mutual Fund,XLV.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLV,Equity Fund,Leisure Industry,1
+XLY US Equity,USD,,,,ARCX,CONSUMER DISCRETIONARY SELT,Mutual Fund,XLY.P,America/New_York,1430,1930,ETF_Equity,NAC,5,US,0,XLY,Equity Fund,Sector Fund-Energy,1
+XOP US Equity,USD,,,,ARCX,SPDR S&P Oil & Gas Exploration & Production ETF,Mutual Fund,XOP.P,America/New_York,1430,1930,ETF_Equity,NAC,4,US,0,XOP,Equity Fund,Undefined Equity,1
+XRT US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,XRT.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,XRT,Equity Fund,Health & Biotechnology,1
+XBI US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,XBI.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,XBI,Equity Fund,Health & Biotechnology,1
+FBT US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,FBT.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,FBT,Equity Fund,Undefined Equity,1
+FXR US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,FXR.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,FXR,Equity Fund,Country Fund-Japan,1
+DFJ US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,DFJ.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,DFJ,Equity Fund,Health & Biotechnology,1
+XPH US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,XPH.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,XPH,Equity Fund,Unclassified,1
+RHS US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,RHS.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,RHS,Equity Fund,Unclassified,1
+RYU US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,RYU.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,RYU,Equity Fund,Growth & Income-Mid Cap,1
+CZA US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,CZA.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,CZA,Equity Fund,Internet & Telecom,1
+XTL US Equity,USD,,,,ARCX,SPDR S&P Retail ETF,Mutual Fund,XTL.P,America/New_York,1430,1930,ETF_Equity,NAC,3,US,0,XTL,,,1
