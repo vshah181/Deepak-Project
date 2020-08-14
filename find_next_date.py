@@ -68,7 +68,7 @@ def get_inputs():
 
     parser.add_argument("--date", help="Enter date in yyyy-mm-dd format, 2nd "
                                        "October 2017 = 2017-10-02",
-                        required=False, type=check_input_date)  # The program
+                        required=True, type=check_input_date)  # The program
     # can't do anything without a date
     parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
 
@@ -126,6 +126,12 @@ def get_date_indices(working_df, user_date, k_contract):
 
 
 def month_changer(user_date, months_to_add):
+    """
+    Add or subtract n months from the given date
+    :param user_date: date input by the user
+    :param months_to_add: number of months to add (int)
+    :return: The new date, excluding weekends.
+    """
     month = user_date.month + (months_to_add - 1)
     if months_to_add > 0:
         year = user_date.year + int(month / 12)
