@@ -32,6 +32,15 @@ MONTH_DICT = {'F': 'Jan',  # I keep forgetting these, which is why it's here.
               }
 
 
+def go_back_to_friday(some_date):
+    if some_date.weekday() == 5:
+        return some_date - np.timedelta64(1, 'D')
+    elif some_date.weekday() == 6:
+        return some_date - np.timedelta64(2, 'D')
+    else:
+        return some_date
+
+
 def check_input_date(date):
     error_msg = "Error: Please enter the date in the correct yyyy-mm-dd format"
     try:
@@ -45,13 +54,11 @@ def positive_int(num_contracts):
     not_an_int = "Error: The number of additional contracts must be an integer"
     try:
         int(num_contracts)
-        if int(num_contracts) != num_contracts:
-            raise argparse.ArgumentTypeError(not_an_int)
-        elif num_contracts < 0:
+        if int(num_contracts) < 0:
             raise argparse.ArgumentTypeError("Error, cannot have negative "
                                              "number of extra contracts")
         else:
-            return num_contracts
+            return int(num_contracts)
     except ValueError:
         raise argparse.ArgumentTypeError(not_an_int)
 
@@ -80,6 +87,11 @@ def get_inputs():
                                          "(-1 goes back a month)", type=int,
                         default=0)
 
+    parser.add_argument("--timeseries", help="Choose whether or not to show "
+                                             "the timeseries until today. "
+                                             "Requires specified RIC",
+                        type=bool, default=False)
+
     args = parser.parse_args()
 
     if isinstance(args.ric, str):
@@ -88,7 +100,7 @@ def get_inputs():
             args.ric = args.ric + " "  # Sorts out the space issue with single
         # letter RICs.
     return (args.ric, pd.to_datetime(args.date),
-            args.contracts, args.months)
+            args.contracts, args.months, args.timeseries)
 
 
 def make_ric_dataframe(user_ric, full_df):
@@ -149,13 +161,36 @@ def month_changer(user_date, months_to_add):
         return pd.to_datetime(datetime.date(year, month, day))
 
 
+def build_timeseries(user_ric_df, user_date):
+    empty_data = {'Ticker': [],
+                  'Date': []}
+
+    timeseries_df = pd.DataFrame(empty_data)
+
+    today_date = pd.to_datetime(datetime.datetime.now().strftime('%Y-%m-%d'))
+    today_date = go_back_to_friday(today_date)
+    user_date = go_back_to_friday(user_date)
+    days_diff = (today_date - user_date) / np.timedelta64(1, 'D')
+    for days_to_add in range(0, 1 + int(days_diff)):
+        checking_date = user_date + np.timedelta64(days_to_add, 'D')
+        if checking_date.weekday() != 6 and checking_date.weekday() != 5:
+            df_index = get_date_indices(user_ric_df, checking_date, 0)
+            ticker = meta_master.iloc[df_index[0]]['ticker']
+            checking_date_string = checking_date.strftime('%d/%m/%Y')
+            timeseries_new_row = {'Ticker': ticker,
+                                  'Date': checking_date_string}
+            timeseries_df = timeseries_df.append(timeseries_new_row,
+                                                 ignore_index=True)
+    return timeseries_df
+
+
 meta_master = pd.read_csv('metaMaster.csv')
-given_ric, given_date, extra_contracts, n_months = get_inputs()
+given_ric, given_date, extra_contracts, n_months, show_timeseries = get_inputs()
 
 if n_months != 0:
     working_date = month_changer(given_date, n_months)
 else:
-    working_date = given_date
+    working_date = go_back_to_friday(given_date)
 
 if given_ric is None:
     work_df = meta_master
@@ -174,3 +209,10 @@ while True:
     if i > extra_contracts:
         break
 print(meta_master.loc[required_row_indices])
+
+if show_timeseries:
+    try:
+        len(given_ric)
+        print(build_timeseries(work_df, working_date))
+    except TypeError:
+        print("Error: Cannot build timeseries without RIC")
