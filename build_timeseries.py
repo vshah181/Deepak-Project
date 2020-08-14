@@ -95,3 +95,4 @@ for days_to_add in range(0, 1+int(days_diff)):
         timeseries_df = timeseries_df.append(timeseries_new_row,
                                              ignore_index=True)
 
+print(timeseries_df)
