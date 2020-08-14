@@ -32,6 +32,30 @@ MONTH_DICT = {'F': 'Jan',  # I keep forgetting these, which is why it's here.
               }
 
 
+def check_input_date(date):
+    error_msg = "Error: Please enter the date in the correct yyyy-mm-dd format"
+    try:
+        datetime.datetime.strptime(date, '%Y-%m-%d')
+        return date
+    except ValueError:
+        raise argparse.ArgumentTypeError(error_msg)
+
+
+def positive_int(num_contracts):
+    not_an_int = "Error: The number of additional contracts must be an integer"
+    try:
+        int(num_contracts)
+        if int(num_contracts) != num_contracts:
+            raise argparse.ArgumentTypeError(not_an_int)
+        elif num_contracts < 0:
+            raise argparse.ArgumentTypeError("Error, cannot have negative "
+                                             "number of extra contracts")
+        else:
+            return num_contracts
+    except ValueError:
+        raise argparse.ArgumentTypeError(not_an_int)
+
+
 def get_inputs():
     """
     Use the argparser to get the date and RIC (optional)
@@ -42,15 +66,15 @@ def get_inputs():
                                                  "of a future from RIC and a "
                                                  "given date.")
 
-    parser.add_argument("--date", help="Enter date in dd/mm/yyyy format, 2nd "
-                                       "October 2017 = 02/10/2017",
-                        required=True)  # The program can't do anything without
-    # a date
+    parser.add_argument("--date", help="Enter date in yyyy-mm-dd format, 2nd "
+                                       "October 2017 = 2017-10-02",
+                        required=False, type=check_input_date)  # The program
+    # can't do anything without a date
     parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
 
     parser.add_argument("--contracts", help="The number of additional "
-                                            "contracts to display", type=int,
-                        default=0)
+                                            "contracts to display",
+                        type=positive_int, default=0)
 
     parser.add_argument("--months", help="The number of months to add "
                                          "(-1 goes back a month)", type=int,
@@ -58,14 +82,16 @@ def get_inputs():
 
     args = parser.parse_args()
 
-    if isinstance(args.ric, str) and len(args.ric) == 1:
-        args.ric = args.ric + " "  # Sorts out the space issue with single
+    if isinstance(args.ric, str):
+        args.ric = args.ric.upper()
+        if len(args.ric) == 1:
+            args.ric = args.ric + " "  # Sorts out the space issue with single
         # letter RICs.
-    return (args.ric, pd.to_datetime(args.date, dayfirst=True),
+    return (args.ric, pd.to_datetime(args.date),
             args.contracts, args.months)
 
 
-def make_ric_dataframe(full_df, user_ric):
+def make_ric_dataframe(user_ric, full_df):
     """
     If an RIC is specified then makes a working dataframe containing only the
     specified RIC.
@@ -131,7 +157,7 @@ if given_ric is None:
     print("No RIC specified. Any input given under '--contracts' will be",
           "ignored.")
 else:
-    work_df = make_ric_dataframe(meta_master, given_ric)
+    work_df = make_ric_dataframe(given_ric, meta_master)
 
 i = 0
 required_row_indices = np.zeros(0)
