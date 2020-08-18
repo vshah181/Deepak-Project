@@ -8,6 +8,12 @@ A program to find the next trading date given a date and optionally an RIC
 # TODO: Build time-series returning contract code from front contract everyday
 #  from user specified date to today's date (system date)
 
+# TODO: Front contract +/- n months on the timeseries.
+
+# TODO: Fix +/- n months implementation on timeseries
+
+# TODO: Test the commoditites W and CT and CL
+
 # Front contract means the next contract due to expire.
 
 import numpy as np
@@ -213,6 +219,7 @@ print(meta_master.loc[required_row_indices])
 if show_timeseries:
     try:
         len(given_ric)
-        print(build_timeseries(work_df, working_date))
+        a = build_timeseries(work_df, working_date)
+        b = 2
     except TypeError:
         print("Error: Cannot build timeseries without RIC")
