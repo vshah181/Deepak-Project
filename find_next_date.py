@@ -3,15 +3,6 @@
 A program to find the next trading date given a date and optionally an RIC
 """
 
-# TODO: Handle exceptions!!!!
-
-# TODO: Build time-series returning contract code from front contract everyday
-#  from user specified date to today's date (system date)
-
-# TODO: Front contract +/- n months on the timeseries.
-
-# TODO: Fix +/- n months implementation on timeseries
-
 # TODO: Test the commoditites W and CT and CL
 
 # Front contract means the next contract due to expire.
@@ -167,7 +158,7 @@ def month_changer(user_date, months_to_add):
         return pd.to_datetime(datetime.date(year, month, day))
 
 
-def build_timeseries(user_ric_df, user_date):
+def build_timeseries(user_ric_df, user_date, extra_months):
     empty_data = {'Ticker': [],
                   'Date': []}
 
@@ -179,8 +170,9 @@ def build_timeseries(user_ric_df, user_date):
     days_diff = (today_date - user_date) / np.timedelta64(1, 'D')
     for days_to_add in range(0, 1 + int(days_diff)):
         checking_date = user_date + np.timedelta64(days_to_add, 'D')
-        if checking_date.weekday() != 6 and checking_date.weekday() != 5:
-            df_index = get_date_indices(user_ric_df, checking_date, 0)
+        added_month_date = month_changer(checking_date, extra_months)
+        if added_month_date.weekday() != 6 and added_month_date.weekday() != 5:
+            df_index = get_date_indices(user_ric_df, added_month_date, 0)
             ticker = meta_master.iloc[df_index[0]]['ticker']
             checking_date_string = checking_date.strftime('%d/%m/%Y')
             timeseries_new_row = {'Ticker': ticker,
@@ -191,20 +183,20 @@ def build_timeseries(user_ric_df, user_date):
 
 
 meta_master = pd.read_csv('metaMaster.csv')
-given_ric, given_date, extra_contracts, n_months, show_timeseries = get_inputs()
+input_ric, input_date, extra_contracts, n_months, show_timeseries = get_inputs()
 
 if n_months != 0:
-    working_date = month_changer(given_date, n_months)
+    working_date = month_changer(input_date, n_months)
 else:
-    working_date = go_back_to_friday(given_date)
+    working_date = input_date
 
-if given_ric is None:
+if input_ric is None:
     work_df = meta_master
     extra_contracts = 0
     print("No RIC specified. Any input given under '--contracts' will be",
           "ignored.")
 else:
-    work_df = make_ric_dataframe(given_ric, meta_master)
+    work_df = make_ric_dataframe(input_ric, meta_master)
 
 i = 0
 required_row_indices = np.zeros(0)
@@ -218,8 +210,10 @@ print(meta_master.loc[required_row_indices])
 
 if show_timeseries:
     try:
-        len(given_ric)
-        a = build_timeseries(work_df, working_date)
-        b = 2
+        len(input_ric)
+        timeseries = build_timeseries(work_df, input_date, abs(n_months))
+        print(timeseries)
+        print("Each date in the timeseries has had", n_months, "added to it",
+              "before the ticker was calculated")
     except TypeError:
         print("Error: Cannot build timeseries without RIC")
