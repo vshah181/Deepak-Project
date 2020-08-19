@@ -209,6 +209,9 @@ while True:
 print(meta_master.loc[required_row_indices])
 
 if show_timeseries:
+    if n_months < 0:
+        print("Timeseries will not be modified by months for negative months")
+        n_months = 0
     try:
         len(input_ric)
         timeseries = build_timeseries(work_df, input_date, abs(n_months))
