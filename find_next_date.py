@@ -1,6 +1,8 @@
 """
 @author Varun Shah
 A program to find the next trading date given a date and optionally an RIC
+
+This module might need to be renamed to something better.
 """
 
 # TODO: Test the commoditites W and CT and CL
@@ -72,7 +74,8 @@ def get_inputs():
 
     parser.add_argument("--date", help="Enter date in yyyy-mm-dd format, 2nd "
                                        "October 2017 = 2017-10-02",
-                        required=True, type=check_input_date)  # The program
+                        required=True, type=check_input_date,
+                        default="2007-01-01")  # The program
     # can't do anything without a date
     parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
 
@@ -86,7 +89,8 @@ def get_inputs():
 
     parser.add_argument("--timeseries", help="Choose whether or not to show "
                                              "the timeseries until today. "
-                                             "Requires specified RIC",
+                                             "Requires specified RIC and is a "
+                                             "bool type (True or False)",
                         type=bool, default=False)
 
     args = parser.parse_args()
@@ -216,7 +220,7 @@ if show_timeseries:
         len(input_ric)
         timeseries = build_timeseries(work_df, input_date, abs(n_months))
         print(timeseries)
-        print("Each date in the timeseries has had", n_months, "added to it",
-              "before the ticker was calculated")
+        print("Each date in the timeseries has had", n_months, " months added",
+              "to it before the ticker was calculated")
     except TypeError:
         print("Error: Cannot build timeseries without RIC")
