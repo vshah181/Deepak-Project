@@ -74,14 +74,15 @@ def get_inputs():
 
     parser.add_argument("--date", help="Enter date in yyyy-mm-dd format, 2nd "
                                        "October 2017 = 2017-10-02",
-                        required=True, type=check_input_date,
+                        required=False, type=check_input_date,
                         default="2007-01-01")  # The program
     # can't do anything without a date
-    parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
+    parser.add_argument("--ric", help="Enter RIC in capitals", type=str,
+                        default='W')
 
     parser.add_argument("--contracts", help="The number of additional "
                                             "contracts to display",
-                        type=positive_int, default=0)
+                        type=positive_int, default=1)
 
     parser.add_argument("--months", help="The number of months to add "
                                          "(-1 goes back a month)", type=int,
@@ -93,6 +94,14 @@ def get_inputs():
                                              "bool type (True or False)",
                         type=bool, default=False)
 
+    parser.add_argument("--next_contract", help="Will take the input value "
+                                                "from the argument "
+                                                "--contracts and skip that "
+                                                "number of contracts after "
+                                                "the first generic when "
+                                                "showing the timeseries",
+                        type=bool, default=False)
+
     args = parser.parse_args()
 
     if isinstance(args.ric, str):
@@ -101,7 +110,7 @@ def get_inputs():
             args.ric = args.ric + " "  # Sorts out the space issue with single
         # letter RICs.
     return (args.ric, pd.to_datetime(args.date),
-            args.contracts, args.months, args.timeseries)
+            args.contracts, args.months, args.timeseries, args.next_contract)
 
 
 def make_ric_dataframe(user_ric, full_df):
@@ -162,7 +171,7 @@ def month_changer(user_date, months_to_add):
         return pd.to_datetime(datetime.date(year, month, day))
 
 
-def build_timeseries(user_ric_df, user_date, extra_months):
+def build_timeseries(user_ric_df, user_date, extra_months, skipped_contracts):
     empty_data = {'Ticker': [],
                   'Date': []}
 
@@ -172,22 +181,26 @@ def build_timeseries(user_ric_df, user_date, extra_months):
     today_date = go_back_to_friday(today_date)
     user_date = go_back_to_friday(user_date)
     days_diff = (today_date - user_date) / np.timedelta64(1, 'D')
+
     for days_to_add in range(0, 1 + int(days_diff)):
         checking_date = user_date + np.timedelta64(days_to_add, 'D')
         added_month_date = month_changer(checking_date, extra_months)
+
         if added_month_date.weekday() != 6 and added_month_date.weekday() != 5:
-            df_index = get_date_indices(user_ric_df, added_month_date, 0)
+            df_index = get_date_indices(user_ric_df, added_month_date,
+                                        skipped_contracts)
             ticker = meta_master.iloc[df_index[0]]['ticker']
             checking_date_string = checking_date.strftime('%d/%m/%Y')
             timeseries_new_row = {'Ticker': ticker,
                                   'Date': checking_date_string}
             timeseries_df = timeseries_df.append(timeseries_new_row,
                                                  ignore_index=True)
+
     return timeseries_df
 
 
 meta_master = pd.read_csv('metaMaster.csv')
-input_ric, input_date, extra_contracts, n_months, show_timeseries = get_inputs()
+input_ric, input_date, extra_contracts, n_months, show_timeseries, skip_contracts = get_inputs()
 
 if n_months != 0:
     working_date = month_changer(input_date, n_months)
@@ -212,13 +225,17 @@ while True:
         break
 print(meta_master.loc[required_row_indices])
 
+if not skip_contracts:
+    extra_contracts = 0
+
 if show_timeseries:
     if n_months < 0:
         print("Timeseries will not be modified by months for negative months")
         n_months = 0
     try:
         len(input_ric)
-        timeseries = build_timeseries(work_df, input_date, abs(n_months))
+        timeseries = build_timeseries(work_df, input_date, abs(n_months),
+                                      extra_contracts)
         print(timeseries)
         print("Each date in the timeseries has had", n_months, " months added",
               "to it before the ticker was calculated")
