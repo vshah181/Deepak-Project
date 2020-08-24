@@ -77,12 +77,11 @@ def get_inputs():
                         required=False, type=check_input_date,
                         default="2007-01-01")  # The program
     # can't do anything without a date
-    parser.add_argument("--ric", help="Enter RIC in capitals", type=str,
-                        default='W')
+    parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
 
     parser.add_argument("--contracts", help="The number of additional "
                                             "contracts to display",
-                        type=positive_int, default=1)
+                        type=positive_int, default=0)
 
     parser.add_argument("--months", help="The number of months to add "
                                          "(-1 goes back a month)", type=int,
@@ -92,7 +91,7 @@ def get_inputs():
                                              "the timeseries until today. "
                                              "Requires specified RIC and is a "
                                              "bool type (True or False)",
-                        type=bool, default=False)
+                        type=bool, default=True)
 
     parser.add_argument("--next_contract", help="Will take the input value "
                                                 "from the argument "
