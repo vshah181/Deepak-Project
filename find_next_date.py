@@ -74,7 +74,7 @@ def get_inputs():
 
     parser.add_argument("--date", help="Enter date in yyyy-mm-dd format, 2nd "
                                        "October 2017 = 2017-10-02",
-                        required=False, type=check_input_date,
+                        required=True, type=check_input_date,
                         default="2007-01-01")  # The program
     # can't do anything without a date
     parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
@@ -99,7 +99,7 @@ def get_inputs():
                                                 "number of contracts after "
                                                 "the first generic when "
                                                 "showing the timeseries",
-                        type=bool, default=False)
+                        type=bool, default=True)
 
     args = parser.parse_args()
 
@@ -154,7 +154,7 @@ def month_changer(user_date, months_to_add):
     :return: The new date, excluding weekends.
     """
     month = user_date.month + (months_to_add - 1)
-    if months_to_add > 0:
+    if months_to_add >= 0:
         year = user_date.year + int(month / 12)
     else:
         year = user_date.year - math.ceil(abs(month) / 12)
@@ -185,10 +185,14 @@ def build_timeseries(user_ric_df, user_date, extra_months, skipped_contracts):
         checking_date = user_date + np.timedelta64(days_to_add, 'D')
         added_month_date = month_changer(checking_date, extra_months)
 
-        if added_month_date.weekday() != 6 and added_month_date.weekday() != 5:
+        if checking_date.weekday() != 6 and checking_date.weekday() != 5:
             df_index = get_date_indices(user_ric_df, added_month_date,
                                         skipped_contracts)
-            ticker = meta_master.iloc[df_index[0]]['ticker']
+            try:
+                ticker = meta_master.iloc[df_index[0]]['ticker']
+            except IndexError:
+                ticker = "Error: Contract not found in meta"
+
             checking_date_string = checking_date.strftime('%d/%m/%Y')
             timeseries_new_row = {'Ticker': ticker,
                                   'Date': checking_date_string}
