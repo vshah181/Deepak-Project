@@ -7,6 +7,8 @@ This module might need to be renamed to something better.
 
 # Front contract means the next contract due to expire.
 
+# TODO Make optimisation
+
 import numpy as np
 import pandas as pd
 import calendar
@@ -183,7 +185,7 @@ def add_price(given_timeseries):
             price = "N/A"
         price_array.append(price)
     given_timeseries['Price'] = price_array
-    print(given_timeseries)
+    return given_timeseries
 
 
 def build_timeseries(user_ric_df, user_date, extra_months, skipped_contracts):
@@ -215,6 +217,7 @@ def build_timeseries(user_ric_df, user_date, extra_months, skipped_contracts):
             timeseries_df = timeseries_df.append(timeseries_new_row,
                                                  ignore_index=True)
 
+    timeseries_df = add_price(timeseries_df)
     return timeseries_df
 
 
@@ -259,8 +262,5 @@ if show_timeseries:
         print(timeseries)
         print("Each date in the timeseries has had", n_months, " months added",
               "to it before the ticker was calculated")
-        print(add_price(timeseries))
     except TypeError:
         print("Error: Cannot build timeseries without RIC")
-
-
