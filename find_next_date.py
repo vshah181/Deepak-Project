@@ -5,8 +5,6 @@ A program to find the next trading date given a date and optionally an RIC
 This module might need to be renamed to something better.
 """
 
-# TODO: Test the commoditites W and CT and CL
-
 # Front contract means the next contract due to expire.
 
 import numpy as np
@@ -74,10 +72,11 @@ def get_inputs():
 
     parser.add_argument("--date", help="Enter date in yyyy-mm-dd format, 2nd "
                                        "October 2017 = 2017-10-02",
-                        required=True, type=check_input_date,
-                        default="2007-01-01")  # The program
+                        required=False, type=check_input_date,
+                        default="2019-01-01")  # The program
     # can't do anything without a date
-    parser.add_argument("--ric", help="Enter RIC in capitals", type=str)
+    parser.add_argument("--ric", help="Enter RIC in capitals", type=str,
+                        default='W')
 
     parser.add_argument("--contracts", help="The number of additional "
                                             "contracts to display",
@@ -170,6 +169,23 @@ def month_changer(user_date, months_to_add):
         return pd.to_datetime(datetime.date(year, month, day))
 
 
+def add_price(given_timeseries):
+    price_array = []
+    for j in range(0, len(given_timeseries)):
+        ticker = given_timeseries['Ticker'][j]
+        year = '20' + given_timeseries['Ticker'][j][3:5]
+        date = pd.to_datetime(given_timeseries['Date'][j], dayfirst=True)
+        date = datetime.datetime.strftime(date, "%Y-%m-%d")
+        year_df = pd.read_csv(year+'.csv')
+        try:
+            price = year_df.loc[year_df['date'] == date][ticker].iloc[0]
+        except IndexError:
+            price = "N/A"
+        price_array.append(price)
+    given_timeseries['Price'] = price_array
+    print(given_timeseries)
+
+
 def build_timeseries(user_ric_df, user_date, extra_months, skipped_contracts):
     empty_data = {'Ticker': [],
                   'Date': []}
@@ -222,7 +238,8 @@ i = 0
 required_row_indices = np.zeros(0)
 while True:
     required_row_indices = np.append(required_row_indices,
-                                     get_date_indices(work_df, working_date, i))
+                                     get_date_indices(work_df,
+                                                      working_date, i))
     i += 1
     if i > extra_contracts:
         break
@@ -242,5 +259,8 @@ if show_timeseries:
         print(timeseries)
         print("Each date in the timeseries has had", n_months, " months added",
               "to it before the ticker was calculated")
+        print(add_price(timeseries))
     except TypeError:
         print("Error: Cannot build timeseries without RIC")
+
+
