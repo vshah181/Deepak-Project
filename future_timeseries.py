@@ -7,7 +7,6 @@ This module might need to be renamed to something better.
 
 # Front contract means the next contract due to expire.
 
-# TODO Should be able to take a list of RICs
 
 import numpy as np
 import pandas as pd
