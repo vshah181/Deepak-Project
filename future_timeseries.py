@@ -7,11 +7,7 @@ This module might need to be renamed to something better.
 
 # Front contract means the next contract due to expire.
 
-# TODO Add return
-# Return means current price divided by last price
-# TODO Make into a class called continuous timeseries
 # TODO Should be able to take a list of RICs
-# TODO Make the n_months thing a boolean parameter
 
 import numpy as np
 import pandas as pd
@@ -65,11 +61,17 @@ class ContinuousTimeseries:
     def __init__(self, start_date, ric, k_contracts=1, n_months=False):
         # Constructor method
         self.start_date = pd.to_datetime(start_date)
-        self.ric = ric.upper()
-        if len(self.ric) == 1:
-            self.ric = self.ric + " "
-        self.n_months = n_months
 
+        self.ric = ric
+        ric_list = []
+        for single_ric in self.ric:
+            single_ric = single_ric.upper()
+            if len(single_ric) == 1:
+                single_ric = single_ric + " "
+            ric_list.append(single_ric)
+        self.ric = ric_list
+
+        self.n_months = n_months
         if self.n_months:
             self.k_contracts = 1
         else:
@@ -80,13 +82,14 @@ class ContinuousTimeseries:
                                                      strftime('%Y-%m-%d')))
         self.full_df = pd.read_csv('metaMaster.csv')
 
-    def get_kth_contract(self, date):
+    def get_kth_contract(self, date, given_ric):
         """
         Finds the next trading date
+        :param given_ric:
         :param date:
         :return: next_date[pd_datetime]
         """
-        working_df = self.get_ric_contracts()
+        working_df = self.get_ric_contracts(given_ric)
         roll_series = pd.to_datetime(working_df['myRollDT'], dayfirst=True)
         date_df = pd.DataFrame(
             dict(roll_date=roll_series, given_date=date))
@@ -101,13 +104,13 @@ class ContinuousTimeseries:
                                   future_dates['diff_days'].min()).dropna()
         return next_date.index
 
-    def get_ric_contracts(self):
+    def get_ric_contracts(self, given_ric):
         """
         If an RIC is specified then makes a working dataframe containing only
         the specified RIC.
         :return: ric_df; the working dataframe.
         """
-        ric_df = self.full_df.where(self.full_df['code'] == self.ric).dropna()
+        ric_df = self.full_df.where(self.full_df['code'] == given_ric).dropna()
         return ric_df
 
     def append_prices(self, given_timeseries):
@@ -141,7 +144,7 @@ class ContinuousTimeseries:
         given_timeseries['Return'] = return_array
         return given_timeseries
 
-    def build_timeseries(self):
+    def build_ric_timeseries(self, given_ric):
         empty_data = {'Ticker': [],
                       'Date': []}
 
@@ -157,7 +160,7 @@ class ContinuousTimeseries:
                 added_month_date = checking_date
 
             if checking_date.weekday() != 6 and checking_date.weekday() != 5:
-                df_index = self.get_kth_contract(added_month_date)
+                df_index = self.get_kth_contract(added_month_date, given_ric)
                 try:
                     ticker = self.full_df.iloc[df_index[0]]['ticker']
                 except IndexError:
@@ -173,6 +176,12 @@ class ContinuousTimeseries:
         timeseries_df = self.append_return(timeseries_df)
         return timeseries_df
 
+    def build_timeseries(self):
+        timeseries_list = []
+        for given_ric in self.ric:
+            timeseries_list.append(self.build_ric_timeseries(given_ric))
+        return timeseries_list
 
-obj = ContinuousTimeseries("2007-01-01", 'C')
+
+obj = ContinuousTimeseries("2019-01-01", ['w', 'c'])
 a = obj.build_timeseries()
