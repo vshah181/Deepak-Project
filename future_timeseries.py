@@ -129,10 +129,10 @@ class ContinuousTimeseries:
     def append_return(self, given_timeseries):
         return_array = [np.nan]
         price_array = given_timeseries['Price'].to_numpy(dtype=float)
-        for j in range(1, len(price_array) + 1):
+        for j in range(1, len(price_array)):
             indexer = j-1
             if np.isnan(price_array[j]):
-                return_array[j] = np.nan
+                return_array.append(np.nan)
             else:
                 while np.isnan(price_array[j] / price_array[indexer]):
                     indexer -= 1
