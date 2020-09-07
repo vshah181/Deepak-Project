@@ -71,17 +71,13 @@ class ContinuousTimeseries:
         self.ric = ric_list
 
         self.n_months = n_months
-        if self.n_months:
-            self.k_contracts = 1
-        else:
-            self.k_contracts = k_contracts
-
+        self.k_contracts = k_contracts
         self.today_date \
             = go_to_last_business_day(pd.to_datetime(datetime.datetime.now().
                                                      strftime('%Y-%m-%d')))
         self.full_df = pd.read_csv('metaMaster.csv')
 
-    def get_kth_contract(self, date, given_ric):
+    def get_kth_contract(self, date, given_ric, contract_k):
         """
         Finds the next trading date
         :param given_ric:
@@ -95,7 +91,7 @@ class ContinuousTimeseries:
         date_df['diff_days'] = (date_df['roll_date'] - date_df['given_date'])
         date_df['diff_days'] = date_df['diff_days'] / np.timedelta64(1, 'D')
         future_dates = date_df.where(date_df['diff_days'] > 0).dropna()
-        for j in range(1, self.k_contracts):
+        for j in range(1, contract_k):
             future_dates = date_df.where(future_dates['diff_days']
                                          != future_dates[
                                              'diff_days'].min()).dropna()
@@ -155,11 +151,14 @@ class ContinuousTimeseries:
             checking_date = user_date + np.timedelta64(days_to_add, 'D')
             if self.n_months:
                 added_month_date = add_months(checking_date, self.k_contracts)
+                kth_contract = 1
             else:
                 added_month_date = checking_date
+                kth_contract = self.k_contracts
 
             if checking_date.weekday() != 6 and checking_date.weekday() != 5:
-                df_index = self.get_kth_contract(added_month_date, given_ric)
+                df_index = self.get_kth_contract(added_month_date, given_ric,
+                                                 kth_contract)
                 try:
                     ticker = self.full_df.iloc[df_index[0]]['ticker']
                 except IndexError:
