@@ -177,7 +177,6 @@ class ContinuousTimeseries:
     def append_prices_and_returns(self, given_timeseries):
         price_list = []
         return_list = []
-        first_price = True
         for j in range(0, len(given_timeseries)):
             ticker = given_timeseries['Ticker'][j]
             year = '20' + given_timeseries['Ticker'][j][3:5]
@@ -188,10 +187,10 @@ class ContinuousTimeseries:
                 price = year_df.loc[year_df['date']
                                     == date_str][ticker].iloc[0]
                 price_index = year_df.loc[year_df['date']
-                                    == date_str][ticker].index[0]
-                if first_price:
+                                          == date_str][ticker].index[0]
+                first_price_index = year_df[ticker].dropna().index[0]
+                if first_price_index == price_index:
                     this_return = np.nan
-                    first_price = False
                 else:
                     prices_til_now = year_df[ticker].dropna().loc[:price_index]
                     last_day_price = prices_til_now.iloc[-2]
@@ -250,5 +249,5 @@ class ContinuousTimeseries:
         return self.full_df
 
 
-obj = ContinuousTimeseries("2019-01-01", ['w', 'c'])
-fdf = obj.check_var()
+obj = ContinuousTimeseries("2009-01-02", 'w')
+fdf = obj.build_timeseries()
