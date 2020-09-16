@@ -72,6 +72,26 @@ def get_eighth_business_day(string_date):
     return eighth_business_day.strftime('%d/%m/%Y')
 
 
+def add_business_days(from_date, add_days):
+    business_days_to_add = add_days
+    current_date = from_date
+    if add_days > 0:
+        while business_days_to_add > 0:
+            current_date += datetime.timedelta(days=1)
+            weekday = current_date.weekday()
+            if weekday >= 5:
+                continue
+            business_days_to_add -= 1
+    elif add_days < 0:
+        while business_days_to_add < 0:
+            current_date -= datetime.timedelta(days=1)
+            weekday = current_date.weekday()
+            if weekday >= 5:
+                continue
+            business_days_to_add += 1
+    return current_date
+
+
 def add_months(user_date, months_to_add):
     month = user_date.month + (months_to_add - 1)
     if months_to_add >= 0:
@@ -92,7 +112,7 @@ def add_months(user_date, months_to_add):
 
 class ContinuousTimeseries:
     def __init__(self, start_date, ric, k_contracts=1, n_months=False,
-                 use_gsci=False):
+                 use_gsci=False, business_days_to_add=0):
         # Constructor method
         self.start_date = pd.to_datetime(start_date)
 
@@ -112,10 +132,12 @@ class ContinuousTimeseries:
                                                      strftime('%Y-%m-%d')))
         self.full_df = pd.read_csv('metaMaster.csv')
         self.use_gsci = use_gsci
+        self.business_days_to_add = business_days_to_add
 
     def add_gsci_column(self):
         gsci_info = pd.read_csv('gsci.csv', index_col=0)
         gsci_column = [np.nan] * len(self.full_df['ticker'])
+        user_roll_date_column = [np.nan] * len(self.full_df['ticker'])
         for (cmdty, data) in gsci_info.iteritems():
             for ticker in self.full_df['ticker']:
                 df_index = self.full_df['ticker'].where(
@@ -123,7 +145,7 @@ class ContinuousTimeseries:
                 if ticker[:2] == cmdty:
                     cmdty_series = gsci_info[ticker[:2]]
                     cmdty_month_series = cmdty_series.where(cmdty_series
-                                                            == ticker[3])
+                                                            == ticker[2])
                     if (cmdty_month_series.notna()[::-1].idxmax() == 12
                             and cmdty_month_series.notna().idxmax() == 1):
                         # Then we need to iterate from the beginning
@@ -136,23 +158,41 @@ class ContinuousTimeseries:
                     else:
                         month = cmdty_month_series.notna()[::-1].idxmax()
 
-                    if MONTH_DICT[ticker[2]] > month:
-                        # Then we need to go to the next year
-                        year = int(ticker[3:5]) + 2001
+                    if MONTH_DICT[ticker[2]] < month:
+                        # Then we need to go to the last year
+                        year = int(ticker[3:5]) + 1999
                     else:
                         # Then we stay in the same year
                         year = int(ticker[3:5]) + 2000
                     date_string = str(month) + '/' + str(year)
                     gsci_roll_date = get_eighth_business_day(date_string)
                     gsci_column[df_index] = gsci_roll_date
+                    user_roll_date_raw = \
+                        add_business_days(pd.to_datetime(gsci_roll_date,
+                                                         dayfirst=True),
+                                          self.business_days_to_add)
+                    last_date_str \
+                        = self.full_df.loc[self.full_df['ticker']
+                                           == ticker]['LAST_TRADEABLE_DT'].\
+                        iloc[0]
+                    last_date = pd.to_datetime(last_date_str, dayfirst=True)
+                    if last_date < user_roll_date_raw:
+                        # Then there should be a warning
+                        user_roll_date_str = last_date_str
+                    else:
+                        user_roll_date_str \
+                            = user_roll_date_raw.strftime('%d/%m/%Y')
+                    user_roll_date_column[df_index] = user_roll_date_str
                 else:
                     gsci_column[df_index] = np.nan
+                    user_roll_date_column[df_index] = np.nan
         self.full_df["GSCIRollDT"] = gsci_column
+        self.full_df["userRollDT"] = user_roll_date_column
+        return self.full_df
 
     def get_kth_contract(self, date, given_ric, contract_k):
         if self.use_gsci:
-            self.add_gsci_column()
-            date_column = 'GSCIRollDT'
+            date_column = 'userRollDT'
         else:
             date_column = 'myRollDT'
         working_df = self.get_ric_contracts(given_ric)
@@ -234,20 +274,17 @@ class ContinuousTimeseries:
                                       'Date': checking_date_string}
                 timeseries_df = timeseries_df.append(timeseries_new_row,
                                                      ignore_index=True)
-
         timeseries_df = self.append_prices_and_returns(timeseries_df)
         return timeseries_df
 
     def build_timeseries(self):
         timeseries_list = []
+        if self.use_gsci:
+            self.add_gsci_column()
         for given_ric in self.ric:
             timeseries_list.append(self.build_ric_timeseries(given_ric))
         return timeseries_list
 
-    def check_var(self):
-        self.add_gsci_column()
-        return self.full_df
 
-
-obj = ContinuousTimeseries("2009-01-02", 'w')
-fdf = obj.build_timeseries()
+obj = ContinuousTimeseries("2019-01-02", 'w', use_gsci=True)
+ts = obj.build_timeseries()
