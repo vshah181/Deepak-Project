@@ -183,9 +183,6 @@ class ContinuousTimeseries:
                         user_roll_date_str \
                             = user_roll_date_raw.strftime('%d/%m/%Y')
                     user_roll_date_column[df_index] = user_roll_date_str
-                else:
-                    gsci_column[df_index] = np.nan
-                    user_roll_date_column[df_index] = np.nan
         self.full_df["GSCIRollDT"] = gsci_column
         self.full_df["userRollDT"] = user_roll_date_column
         return self.full_df
