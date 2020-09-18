@@ -10,11 +10,9 @@ import calendar
 import math
 import datetime
 
-# TODO Make the user roll date customizable relative to gsci roll date
-#  (+/- n days)
-#  (Remember to check if the contract has expired - logger warning or error)
 
-# TODO Check that the rolling days aren't holidays.
+# TODO Check that the rolling days aren't holidays. -
+#  Could write to meta as well
 
 MONTH_DICT = {'F': 1,  # Jan (I keep forgetting these, which is why it's here.)
               'G': 2,  # Feb
@@ -178,6 +176,7 @@ class ContinuousTimeseries:
                     last_date = pd.to_datetime(last_date_str, dayfirst=True)
                     if last_date < user_roll_date_raw:
                         # Then there should be a warning
+                        # TODO Add a logger thing here
                         user_roll_date_str = last_date_str
                     else:
                         user_roll_date_str \
@@ -205,6 +204,23 @@ class ContinuousTimeseries:
                                              'diff_days'].min()).dropna()
         next_date = date_df.where(future_dates['diff_days'] ==
                                   future_dates['diff_days'].min()).dropna()
+        checking_roll_date = next_date['roll_date'].iloc[0]
+        checking_roll_date_str = next_date['roll_date'].iloc[0].\
+            strftime('%Y-%m-%d')
+        ticker = self.full_df.loc[next_date.index[0]]['ticker']
+        price_file = prices_dict['20' + ticker[3:5]]
+        row = price_file.where(price_file['date'] == checking_roll_date_str)
+        row_index = row['date'].dropna().index[0]
+        while True:
+            roll_day_price = price_file.loc[row_index][ticker]
+            if np.isnan(roll_day_price):
+                checking_roll_date = checking_roll_date \
+                                     - np.timedelta64(1, 'D')
+                self.full_df.loc[row_index][date_column] \
+                    = checking_roll_date.strftime('%d/%m/%Y')
+                self.get_kth_contract(date, given_ric, contract_k)
+            else:
+                break
         return next_date.index
 
     def get_ric_contracts(self, given_ric):
@@ -262,7 +278,7 @@ class ContinuousTimeseries:
                 df_index = self.get_kth_contract(added_month_date, given_ric,
                                                  kth_contract)
                 try:
-                    ticker = self.full_df.iloc[df_index[0]]['ticker']
+                    ticker = self.full_df.loc[df_index[0]]['ticker']
                 except IndexError:
                     ticker = "Error: Contract not found in meta"
 
@@ -283,5 +299,5 @@ class ContinuousTimeseries:
         return timeseries_list
 
 
-obj = ContinuousTimeseries("2019-01-02", 'w', use_gsci=True)
+obj = ContinuousTimeseries("2019-01-02", 'w', use_gsci=False)
 ts = obj.build_timeseries()
